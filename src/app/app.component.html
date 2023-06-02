@@ -11,13 +11,16 @@
       <div class="col-sm-7">
         <ul class="navbar-nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link menu-style"  href="#">Makeup</a>
+            <a class="nav-link menu-style" (click)="listarProducts('Makeup')">Makeup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu-style" href="#">Skin care</a>
+            <a class="nav-link menu-style" (click)="listarProducts2('Skin Care')">Skin care</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu-style" href="#">Hair</a>
+            <a class="nav-link menu-style" (click)="listarProducts3('Mobile')">Hair</a>
+          </li>
+          <li class="nav-item">
+          <!-- <a sec:authorize="hasRole('ROLE_ADMIN')" class="nav-link menu-style" href="#">Add</a>-->
           </li>
         </ul>
       </div>
@@ -35,7 +38,7 @@
             <a routerLink="login" routerLinkActive="active" class="nav-link menu-style bi bi-person-circle" style="font-size: 1rem"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu-style bi bi-bag" style="font-size: 1rem"></a>
+            <a routerLink="checkout" routerLinkActive="active" class="nav-link menu-style bi bi-bag" style="font-size: 1rem"></a>
           </li>
         </ul>
       </div>
@@ -45,7 +48,7 @@
 <router-outlet></router-outlet>
 
 <footer>
-  <div class="container footer-style">
+  <div class="container ">
     ©2023, Inc. All rights reserved.
   </div>
 </footer>

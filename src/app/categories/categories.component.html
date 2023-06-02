@@ -1,0 +1,81 @@
+<div class="container-fluid p-5">
+  <div class="fw-semibold ">
+    <h2>{{category}}</h2>
+  </div>
+
+  <div class="row g-5 py-4">
+    <div class="col-md-5 col-lg-2 shadow border rounded-3" style="width: 10rem; height: 15rem;">
+      <div class="py-3">
+        <h4 >Filter</h4>
+        <div class="col-md-5 py-2">
+          <div class="btn-group">
+            <button type="button" class="buttonF-style border-bottom" data-bs-toggle="dropdown">
+              Category <i class="bi bi-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="selectFilter('Makeup')">Makeup</a></li>
+              <li><a class="dropdown-item" (click)="selectFilter('Skin Care')">Skin Care</a></li>
+              <li><a class="dropdown-item" (click)="selectFilter('Mobile')">Mobile</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-5 py-2">
+          <div class="btn-group">
+            <button type="button" class="buttonF-style border-bottom"  data-bs-toggle="dropdown">
+              Brand <i class="bi bi-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="selectFilter('Makeup')">Fenty</a></li>
+              <li><a class="dropdown-item" href="#">Dior</a></li>
+              <li><a class="dropdown-item" href="#">Apple</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-5 py-2">
+          <div class="btn-group">
+            <button type="button" class="buttonF-style border-bottom"  data-bs-toggle="dropdown">
+              Price <i class="bi bi-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="selectFilter('Makeup')">Fenty</a></li>
+              <li><a class="dropdown-item" href="#">Dior</a></li>
+              <li><a class="dropdown-item" href="#">Apple</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7 col-lg-10">
+      <h4 class="mb-3">Total productos</h4>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="album ">
+          <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-5">
+
+
+              <div *ngFor="let product of products" class="col">
+                <div class="card shadow-sm border-0" style="height: 25rem; width: 15rem;">
+                  <img src={{product.img}}  class="bd-placeholder-img card-img-top" width="100%" height="230">
+                  <div class="card-body">
+                    <div class="card-text textCards-style fw-semibold">
+                      <p class="text-start">{{product.brand}}</p>
+                    </div>
+                    <div class="card-text">
+                      <p class="text-start">{{product.description}}</p>
+                    </div>
+                    <div class="card-text fw-bold">
+                      <p class="text-start" style="font-size: large;">${{product.price}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+

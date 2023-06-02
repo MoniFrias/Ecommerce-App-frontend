@@ -11,8 +11,9 @@
 footer {
 	background-color:#1A1A1A;
 	height: 50%;
-  color: white;
-  padding: 15px;
+  color: #cac7c762;
+  padding: 25px;
+  font-size: small;
 }
 
 .main1 {
@@ -31,13 +32,20 @@ a img:hover {
   padding: 1px;
 }
 
-.input-style{
+.buttonF-style {
+  background: #ffffff;
   height: 30px;
+  width: 80px;
+  padding: 1px;
+  border: none;
 }
 
-.footer-style {
-  color: white;
-  padding: 8px;
+.textCards-style {
+  font-size: medium;
+}
+
+.input-style{
+  height: 30px;
 }
 
 .container-fluid-style {

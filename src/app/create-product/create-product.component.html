@@ -1,0 +1,51 @@
+<div class="cold-md-6 offset-md-3">
+  <h3 class="text-center">Add product</h3>
+  <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+    <div class="form-group">
+      <label>Category:</label>
+      <input type="text" class="form-control" id="category" [(ngModel)]="product.category" name="category"
+      required="true" minlength="3" maxlength="20" placeholder="Ingrese category" #name ="ngModel" >
+    </div>
+
+    <div class="form-group">
+      <label>Brand:</label>
+      <input type="text" class="form-control" id="brand" [(ngModel)]="product.brand" name="brand"
+      required="true" minlength="3" maxlength="20" placeholder="Ingrese brand" #name ="ngModel" >
+    </div>
+
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name"
+      required="true" minlength="3" maxlength="100" placeholder="Ingrese name" #name ="ngModel" >
+    </div>
+
+    <div class="form-group">
+      <label>Price:</label>
+      <input type="text" class="form-control" id="price" [(ngModel)]="product.price" name="price"
+      required="true" minlength="3" maxlength="20" placeholder="Ingrese price" #name ="ngModel" >
+    </div>
+
+    <div class="form-group">
+      <label>Stock:</label>
+      <input type="text" class="form-control" id="stock" [(ngModel)]="product.stock" name="stock"
+      required="true" minlength="3" maxlength="20" placeholder="Ingrese stock" #name ="ngModel" >
+    </div>
+
+    <div class="form-group">
+      <label>Description:</label>
+      <input type="text" class="form-control" id="description" [(ngModel)]="product.description" name="description"
+      required="true" minlength="3" maxlength="1000" placeholder="Ingrese description" #name ="ngModel" >
+    </div>
+
+    <div class="form-group">
+      <label>Imagen:</label>
+      <input type="file" class="form-control" id="img" [(ngModel)]="product.img" name="img"
+      required="true" placeholder="Ingrese img" #name ="ngModel" >
+    </div>
+
+    <br>
+    <button class="btn btn-success" [disabled]= "!productForm.form.valid">Save</button>
+
+  </form>
+
+</div>
